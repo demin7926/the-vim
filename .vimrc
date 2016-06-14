@@ -70,6 +70,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'taglist.vim'
 
 " 配色方案
 Plugin 'jnurmine/Zenburn'
@@ -95,6 +96,19 @@ map <silent> <leader>nc :NERDTreeClose<cr>
 map <silent> <leader>nt :NERDTreeToggle<cr>
 map <silent> <leader>nm :NERDTreeMirror<cr>
 
+" ============= Taglist setting =============
+" Toggle Taglist
+map <silent> <leader>tlt :TlistToggle<cr>
+" Open Taglist
+map <silent> <leader>tlo :TlistOpen<cr>
+" Close Taglist
+map <silent> <leader>tlc :TlistClose<cr>
+let Tlist_WinWidth=40           " Set the window 41 cols wide.
+let Tlist_Close_On_Select=0     " Close the list when a item is selected
+let Tlist_Use_SingleClick=1     "Go To Target By SingleClick
+let Tlist_Show_One_File = 1     "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1   "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1  "在右侧窗口中显示taglist窗口
 
 " ============= color schema =============
 colorscheme ron
